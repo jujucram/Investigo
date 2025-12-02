@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investir en Cryptomonnaies</title>
+<style>
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f5f6fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar p {
+    font-weight: 700;
+    color: #00a8ff;
+    font-size: 1.5rem;
+}
+.navbar a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.navbar a:hover {
+    color: #00a8ff;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #1e1e2f, #2a2a3f);
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 15px;
+    margin: 30px auto;
+    max-width: 900px;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 1.2rem;
+    color: #dcdde1;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* TITRES SECTIONS */
+h2 {
+    color: #00a8ff;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #00a8ff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* PARAGRAPHES ET LISTES */
+p {
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
+ul {
+    margin: 15px 0 20px 20px;
+    list-style-type: disc;
+}
+li {
+    margin-bottom: 10px;
+}
+
+/* IMAGES */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+}
+
+/* BOUTONS */
+.btn {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    padding: 12px 25px;
+    background: #00a8ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #0097e6;
+    transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .container, .hero {
+        margin: 20px;
+        padding: 15px;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <p>Investigo</p>
+    <div>
+        <a href="index.html">Accueil</a>
+        <a href="immobilier.html">Immobilier</a>
+        <a href="crypto.html">Cryptomonnaies</a>
+        <a href="bourse.html">Bourse</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Investir en Cryptomonnaies</h1>
+    <img src="data:image/webp;base64,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"
+             alt="Graphique de cryptomonnaies">
+
+    <p>Les cryptomonnaies offrent un potentiel de gain élevé, mais comportent également des risques importants. Il est essentiel de bien se renseigner avant d’investir.</p>
+</section>
+
+<!-- CONTENU -->
+<div class="container">
+    <h2>Pourquoi investir ?</h2>
+    <p>Les cryptomonnaies peuvent :</p>
+    <ul>
+        <li>Offrir de fortes plus-values sur le long terme.</li>
+        <li>Permettre la diversification d’un portefeuille.</li>
+        <li>Introduire à la technologie blockchain et aux smart contracts.</li>
+    </ul>
+
+    <h2>Risques principaux</h2>
+    <ul>
+        <li>Volatilité très élevée et fluctuations rapides.</li>
+        <li>Possibilité de pertes importantes.</li>
+        <li>Fraudes et arnaques sur certaines plateformes.</li>
+    </ul>
+
+    <h2>Conseils pour débutants</h2>
+    <ul>
+        <li>Ne jamais investir plus que ce que vous pouvez vous permettre de perdre.</li>
+        <li>Se former et s’informer régulièrement sur le marché.</li>
+        <li>Utiliser des portefeuilles sécurisés et authentifier les plateformes.</li>
+    </ul>
+
+    <div style="text-align:center;">
+        <a href="index.html" class="btn">Accueil</a>
+        <a href="bourse.html" class="btn">Investir en Bourse</a>
+    </div>
+</div>
+
+</body>
+</html>

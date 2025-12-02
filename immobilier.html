@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investir en Immobilier</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <p>Investigo</p>
+    <button class="menu-btn" id="menuBtn">☰</button>
+    <ul class="menu-dropdown" id="menuDropdown">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="immobilier.html">Immobilier</a></li>
+        <li><a href="crypto.html">Cryptomonnaies</a></li>
+        <li><a href="bourse.html">Bourse</a></li>
+    </ul>
+</nav>
+
+<!-- HERO IMMOBILIER -->
+<section class="hero-page">
+    <div class="hero-content-page">
+        <h1>Investir en Immobilier</h1>
+        <p>L’investissement immobilier est l’un des moyens les plus sûrs de générer des revenus passifs.</p>
+        <img src="https://www.bing.com/th/id/OIP.DRti3nAE_qsx6C_uSjPEXwHaE8?w=290&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="image d'immobilier">
+    </div>
+</section>
+
+<!-- CONTENU -->
+<div class="container-page">
+    <h2>Pourquoi investir dans l'immobilier ?</h2>
+    <p style="color: aliceblue;">Investir dans l'immobilier permet de générer un revenu stable grâce aux loyers, tout en bénéficiant d'une valorisation à long terme.</p>
+
+    <h2>Types d’investissement</h2>
+    <ul style="color: aliceblue;">
+        <li>Immobilier locatif</li>
+        <li>SCPI (Sociétés Civiles de Placement Immobilier)</li>
+        <li>Crowdfunding immobilier</li>
+    </ul>
+
+    <h2>Conseils pour réussir</h2>
+    <img src="https://www.bing.com/th/id/OIP.eaadoQecT0SyWXtcDDWAhAHaFj?w=272&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="image d'immobilier">
+    <br>
+    <ul style="color: aliceblue;">
+        <li>Choisissez un bon emplacement, financez intelligemment votre bien et optimisez la gestion locative.</li>
+        <li>Restez informé</li>
+        <li>Négociez les prix</li>
+        <li>Soyez prêt à prendre des risques</li>
+    </ul>
+
+    <div class="navigation-links">
+        <a href="crypto.html" class="btn">Page suivante</a>
+        <a href="index.html" class="btn">Retour à l'accueil</a>
+    </div>
+</div>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const menuDropdown = document.getElementById("menuDropdown");
+
+menuBtn.addEventListener("click", () => {
+    menuDropdown.classList.toggle("show");
+});
+
+document.addEventListener("click", (e) => {
+    if(!e.target.closest(".navbar")){
+        menuDropdown.classList.remove("show");
+    }
+});
+</script>
+</body>
+</html>

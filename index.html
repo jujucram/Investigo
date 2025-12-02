@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investigo : Site d'Investissement</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <p>Investigo</p>
+    <button class="menu-btn" id="menuBtn">☰</button>
+    <ul class="menu-dropdown" id="menuDropdown">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="immobilier.html">Immobilier</a></li>
+        <li><a href="crypto.html">Cryptomonnaies</a></li>
+        <li><a href="bourse.html">Bourse</a></li>
+    </ul>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Bienvenue sur Investigo</h1>
+        <h2>Meilleur site d'investissement d'Afrique centrale</h2>
+        <h3>Appui au développement socio-économique et à la réduction de la pauvreté</h3>
+        <p>Découvrez les meilleures opportunités pour investir intelligemment.</p>
+        <a href="#invest" class="btn">Commencer</a>
+    </div>
+    <br>
+    <div class="hero-image">
+        <img src="https://th.bing.com/th/id/OIP.DwAo8tIuVxurkm-rDR7pMAHaE8?w=262&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="image d'encouragement d'investissement">
+    </div>
+</section>
+
+<!-- INVESTMENTS CARDS -->
+<div class="container" id="invest">
+    <div class="card">
+        <h2>Investir en Immobilier</h2>
+        <p>Profitez de rendements stables en investissant dans l'immobilier locatif.</p>
+        <br>
+        <a href="immobilier.html" class="btn">En savoir plus</a>
+    </div>
+    <div class="card">
+        <h2>Cryptomonnaies</h2>
+        <p>Découvrez comment générer des profits avec Bitcoin et Ethereum.</p>
+        <br>
+        <a href="crypto.html" class="btn">En savoir plus</a>
+    </div>
+    <div class="card">
+        <h2>Actions et Bourse</h2>
+        <p>Investissez sur les marchés financiers et maximisez vos gains.</p>
+        <br>
+        <a href="bourse.html" class="btn">En savoir plus</a>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact">
+    <h2>Besoin d'investir ou de confier votre parcours à un expert ?</h2>
+    <p>Contactez-nous via nos différents moyens de communication :</p>
+    <ul>
+        <li>WhatsApp : <a href="https://wa.me/237652534570">Contactez-nous</a></li>
+        <li>E-mail : <a href="mailto:brindicram@gmail.com">Laissez-nous un mail</a></li>
+    </ul>
+</section>
+
+<!-- FOOTER -->
+<footer class="dernier">
+    <p>&copy; 2025 Investigo - Tous droits réservés.</p>
+</footer>
+
+<!-- SCROLL TO TOP BUTTON -->
+<button id="scrollTopBtn">↑</button>
+
+<!-- SCRIPT JS -->
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const menuDropdown = document.getElementById("menuDropdown");
+
+menuBtn.addEventListener("click", () => {
+    menuDropdown.classList.toggle("show");
+});
+
+document.addEventListener("click", (e) => {
+    if (!e.target.closest(".navbar")) {
+        menuDropdown.classList.remove("show");
+    }
+});
+
+// Bouton scroll top
+const scrollBtn = document.getElementById("scrollTopBtn");
+window.addEventListener("scroll", () => {
+    if(window.scrollY > 400){
+        scrollBtn.classList.add("visible");
+    } else {
+        scrollBtn.classList.remove("visible");
+    }
+});
+scrollBtn.addEventListener("click", () => {
+    window.scrollTo({top:0, behavior:"smooth"});
+});
+
+// Animation des cartes
+document.querySelectorAll('.card').forEach((card, i) => {
+    card.style.opacity = 0;
+    card.style.transform = 'translateY(40px)';
+    setTimeout(() => {
+        card.style.transition = 'all 0.8s cubic-bezier(.25,.8,.25,1)';
+        card.style.opacity = 1;
+        card.style.transform = 'translateY(0)';
+    }, 400 + i * 300);
+});
+
+// Effet hover lumineux sur boutons
+document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('mouseenter', () => {
+        btn.style.boxShadow = '0 0 20px 5px #ffd700';
+        btn.style.transform = 'scale(1.08)';
+    });
+    btn.addEventListener('mouseleave', () => {
+        btn.style.boxShadow = '';
+        btn.style.transform = '';
+    });
+});
+</script>
+</body>
+</html>
