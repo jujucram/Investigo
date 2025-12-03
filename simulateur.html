@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulateur d’Investissement – Investigo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background: #f6f7fb;
+            color: #222;
+        }
+
+        header {
+            background: #0f172a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 40px auto;
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            text-align: center;
+            color: #0f172a;
+            margin-bottom: 15px;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #1e40af;
+        }
+
+        .result-box {
+            margin-top: 30px;
+            padding: 20px;
+            background: #eff6ff;
+            border-left: 5px solid #2563eb;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .footer-link {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .footer-link a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>Simulateur d’Investissement</header>
+
+<div class="container">
+
+    <h2>Calcule ton futur capital</h2>
+    <p>Entre les informations ci-dessous et découvre combien tu peux gagner !</p>
+
+    <label>Montant à investir (FCFA)</label>
+    <input type="number" id="montant" placeholder="Ex : 50000">
+
+    <label>Durée (en années)</label>
+    <input type="number" id="duree" placeholder="Ex : 3">
+
+    <label>Taux d’intérêt annuel (%)</label>
+    <input type="number" id="taux" placeholder="Ex : 12">
+
+    <button onclick="calculer()">Simuler maintenant</button>
+
+    <div class="result-box" id="resultat"></div>
+
+    <div class="footer-link">
+        <a href="index.html">← Retour à l’accueil</a>
+    </div>
+
+</div>
+
+<script>
+function calculer() {
+    let montant = parseFloat(document.getElementById("montant").value);
+    let duree = parseFloat(document.getElementById("duree").value);
+    let taux = parseFloat(document.getElementById("taux").value) / 100;
+
+    if (!montant || !duree || !taux) {
+        alert("Remplis toutes les cases !");
+        return;
+    }
+
+    let capitalFinal = montant * Math.pow(1 + taux, duree);
+    let gain = capitalFinal - montant;
+
+    document.getElementById("resultat").style.display = "block";
+    document.getElementById("resultat").innerHTML = `
+        <h3>Résultats de ta simulation :</h3>
+        <p><strong>Capital final :</strong> ${capitalFinal.toFixed(0)} FCFA</p>
+        <p><strong>Gain total :</strong> ${gain.toFixed(0)} FCFA</p>
+    `;
+}
+</script>
+
+</body>
+</html>

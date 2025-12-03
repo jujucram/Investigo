@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formations - Investigo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: #f4f7fb;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0b2f6d, #1d67c9);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 40px;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #e0e6ff;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .footer-link {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .footer-link a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        h2 {
+            color: #0b2f6d;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .course-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            animation: fadeIn 0.7s ease-in-out;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+        }
+
+        .course-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #0b2f6d;
+        }
+
+        .course-desc {
+            flex-grow: 1;
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .course-price {
+            font-weight: 700;
+            font-size: 18px;
+            color: #1d67c9;
+            margin-bottom: 15px;
+        }
+
+        .btn-enroll {
+            background: #1d67c9;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        .btn-enroll:hover {
+            background: #0b2f6d;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #666;
+            margin-top: 40px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Nos Formations</h1>
+    <p>Apprends à investir et à créer plusieurs sources de revenus</p>
+</header>
+
+<div class="container">
+    <h2>Formations disponibles</h2>
+
+    <div class="courses-grid">
+
+        <div class="course-card">
+            <div class="course-title">Investir en Crypto pour Débutants</div>
+            <div class="course-desc">
+                Apprends les bases de la crypto, comment acheter, stocker et faire croître ton capital de manière sécurisée.
+            </div>
+            <div class="course-price">5 000 FCFA</div>
+            <a href="https://wa.me/237673355468?text=Je%20veux%20m'inscrire%20à%20la%20formation%20Crypto" class="btn-enroll">S’inscrire</a>
+        </div>
+
+        <div class="course-card">
+            <div class="course-title">Investissement Immobilier au Cameroun</div>
+            <div class="course-desc">
+                Découvre comment acheter, louer et revendre des biens immobiliers avec un petit budget et un risque réduit.
+            </div>
+            <div class="course-price">10 000 FCFA</div>
+            <a href="https://wa.me/237673355468?text=Je%20veux%20m'inscrire%20à%20la%20formation%20Immobilier" class="btn-enroll">S’inscrire</a>
+        </div>
+
+        <div class="course-card">
+            <div class="course-title">Créer des Revenus Passifs</div>
+            <div class="course-desc">
+                Formation complète pour développer plusieurs sources de revenus et atteindre ton indépendance financière.
+            </div>
+            <div class="course-price">15 000 FCFA</div>
+            <a href="https://wa.me/237673355468?text=Je%20veux%20m'inscrire%20à%20la%20formation%20Revenus%20Passifs" class="btn-enroll">S’inscrire</a>
+        </div>
+
+        <div class="course-card">
+            <div class="course-title">Plan d’Investissement Personnalisé</div>
+            <div class="course-desc">
+                Nous créons un plan complet basé sur ton budget, tes objectifs et ton profil de risque pour investir efficacement.
+            </div>
+            <div class="course-price">Gratuit / Premium</div>
+            <a href="https://wa.me/237673355468?text=Je%20veux%20un%20plan%20d'investissement%20personnalisé" class="btn-enroll">Demander</a>
+        </div>
+
+    </div>
+</div>
+<div class="footer-link">
+        <a href="index.html">← Retour à l’accueil</a>
+    </div>
+
+<footer>
+    © 2025 Investigo — Tous droits réservés
+</footer>
+
+</body>
+</html>

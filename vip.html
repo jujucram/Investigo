@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIP / Offres Premium - Investigo</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, sans-serif;
+        background: #f4f7fb;
+        color: #333;
+    }
+    header {
+        background: linear-gradient(135deg, #0b2f6d, #1d67c9);
+        color: white;
+        padding: 50px 20px;
+        text-align: center;
+    }
+    header h1 { font-size: 42px; margin: 0; font-weight: 700; }
+    header p { font-size: 18px; margin-top: 10px; color: #e0e6ff; }
+    .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+    h2 { color: #0b2f6d; text-align: center; margin-bottom: 30px; }
+    .vip-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+    .vip-card {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: fadeIn 0.7s ease-in-out;
+    }
+    .vip-card:hover { transform: translateY(-5px); box-shadow: 0 10px 35px rgba(0,0,0,0.15); }
+    .vip-title { font-size: 22px; font-weight: bold; color: #0b2f6d; margin-bottom: 15px; }
+    .vip-desc { font-size: 16px; color: #555; line-height: 1.5; margin-bottom: 20px; }
+    .vip-price { font-weight: 700; font-size: 18px; color: #1d67c9; margin-bottom: 20px; }
+    .btn-pay {
+        background: #2563eb;
+        color: white;
+        text-decoration: none;
+        padding: 15px 20px;
+        border-radius: 10px;
+        font-weight: bold;
+        display: inline-block;
+        transition: background 0.3s;
+    }
+    .btn-pay:hover { background: #0b2f6d; }
+    footer { text-align: center; padding: 25px; color: #666; margin-top: 40px; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>VIP / Offres Premium</h1>
+    <p>Accédez aux analyses exclusives et au support direct</p>
+</header>
+
+<div class="container">
+<h2>Nos Offres VIP</h2>
+
+<div class="vip-grid">
+
+    <!-- VIP Mensuel -->
+    <div class="vip-card">
+        <div class="vip-title">VIP Mensuel</div>
+        <div class="vip-desc">
+            Accès aux analyses privées, signaux d’investissement et support direct sur WhatsApp.
+        </div>
+        <div class="vip-price">10 000 FCFA / mois</div>
+        <a  href="https://paydunya.com/paylink/TON_LINK_VIP3" target="_blank" class="btn-pay"
+           onclick="setTimeout(() => {window.location.href='https://wa.me/237673355468?text=Je%20viens%20de%20payer%20le%20VIP%20Mensuel';}, 1000)">
+           Payer et confirmer sur WhatsApp
+        </a>
+    </div>
+
+    <!-- VIP Trimestriel -->
+    <div class="vip-card">
+        <div class="vip-title">VIP Trimestriel</div>
+        <div class="vip-desc">
+            Tout le contenu du VIP mensuel avec suivi personnalisé et alertes premium.
+        </div>
+        <div class="vip-price">25 000 FCFA / 3 mois</div>
+        <a href="https://paydunya.com/paylink/TON_LINK_VIP3" target="_blank" class="btn-pay"
+           onclick="setTimeout(() => {window.location.href='https://wa.me/237673355468?text=Je%20viens%20de%20payer%20le%20VIP%20Trimestriel';}, 1000)">
+           Payer et confirmer sur WhatsApp
+        </a>
+    </div>
+
+    <!-- VIP Annuel -->
+    <div class="vip-card">
+        <div class="vip-title">VIP Annuel</div>
+        <div class="vip-desc">
+            Accès complet VIP + consultations privées + plan d’investissement personnalisé.
+        </div>
+        <div class="vip-price">90 000 FCFA / an</div>
+        <a href="https://paydunya.com/paylink/TON_LINK_VIP12" target="_blank" class="btn-pay"
+           onclick="setTimeout(() => {window.location.href='https://wa.me/237673355468?text=Je%20viens%20de%20payer%20le%20VIP%20Annuel';}, 1000)">
+           Payer et confirmer sur WhatsApp
+        </a>
+    </div>
+
+</div>
+</div>
+
+<footer>
+    © 2025 Investigo — Tous droits réservés
+</footer>
+
+</body>
+</html>

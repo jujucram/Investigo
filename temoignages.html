@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Témoignages - Investigo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: #f5f7fb;
+            color: #333;
+        }
+        .footer-link {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .footer-link a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0b2f6d, #1d67c9);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #e0e6ff;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            animation: fadeIn 0.7s ease-in-out;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+        }
+
+        .testimonial-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 2px solid #1d67c9;
+        }
+
+        .testimonial-name {
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #0b2f6d;
+        }
+
+        .testimonial-message {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            margin-top: 40px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Témoignages de nos clients</h1>
+    <p>Découvrez ce que nos utilisateurs disent d’Investigo</p>
+</header>
+
+<div class="container">
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Photo client" class="testimonial-photo">
+            <div class="testimonial-name">Jean M.</div>
+            <div class="testimonial-message">
+                Grâce à Investigo, j’ai pu commencer à investir avec seulement 10 000 FCFA et maintenant j’ai plusieurs petites sources de revenus. Incroyable !
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Photo client" class="testimonial-photo">
+            <div class="testimonial-name">Sophie T.</div>
+            <div class="testimonial-message">
+                Les formations sont claires et adaptées aux débutants. J’ai enfin compris comment investir en crypto et immobilier au Cameroun.
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Photo client" class="testimonial-photo">
+            <div class="testimonial-name">Paul K.</div>
+            <div class="testimonial-message">
+                J’adore le coaching personnalisé. Les conseils d’Investigo m’ont permis de ne pas perdre d’argent dans de mauvais projets.
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Photo client" class="testimonial-photo">
+            <div class="testimonial-name">Clara B.</div>
+            <div class="testimonial-message">
+                La page VIP est top ! Les analyses privées m’ont donné un vrai avantage sur mes investissements.
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer-link">
+        <a href="index.html">← Retour à l’accueil</a>
+    </div>
+
+<footer>
+    © 2025 Investigo — Tous droits réservés
+</footer>
+
+</body>
+</html>
