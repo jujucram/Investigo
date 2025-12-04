@@ -181,5 +181,156 @@ document.querySelectorAll('.btn').forEach(btn => {
     });
 });
 </script>
+    <!-- Chatbot Investigo -->
+<div id="chatbot">
+  <div id="chat-header" onclick="toggleChat()">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp.png" style="width:24px; vertical-align:middle; margin-right:5px;">
+    Investigo
+  </div>
+  <div id="chat-window">
+    <div id="chat-messages"></div>
+    <div id="chat-buttons" style="display:none;">
+      <button onclick="sendMessage('formation')">🎓 Formation VIP</button>
+      <button onclick="sendMessage('paiement')">💰 Infos Paiement</button>
+      <button onclick="sendMessage('contact')">📱 Contact Support</button>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Chatbot container */
+#chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 320px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Header */
+#chat-header {
+  background: #25D366;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+}
+
+/* Chat window */
+#chat-window {
+  display: none;
+  background: #fefefe;
+  border-top: 1px solid #25D366;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Messages area */
+#chat-messages {
+  padding: 10px;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+/* Chat bubbles */
+.bot-message, .user-message {
+  padding: 8px 12px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  max-width: 80%;
+  clear: both;
+}
+
+.bot-message {
+  background: #25D366;
+  color: white;
+  float: left;
+}
+
+.user-message {
+  background: #e5e5e5;
+  color: black;
+  float: right;
+}
+
+/* Buttons container */
+#chat-buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  flex-wrap: wrap;
+  border-top: 1px solid #ddd;
+}
+
+#chat-buttons button {
+  background: #25D366;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 3px;
+  font-weight: bold;
+}
+</style>
+
+<script>
+// Variables
+const messages = document.getElementById('chat-messages');
+const buttons = document.getElementById('chat-buttons');
+
+// Ouvre ou ferme le chat
+function toggleChat(){
+  const window = document.getElementById('chat-window');
+  if(window.style.display === 'block'){
+    window.style.display = 'none';
+  } else {
+    window.style.display = 'block';
+    buttons.style.display = 'flex';
+    if(!messages.hasChildNodes()){
+      botMessage("Bonjour 👋! Bienvenue sur Investigo. Choisissez une option ci-dessous pour commencer.");
+    }
+  }
+}
+
+// Affiche un message du bot
+function botMessage(text){
+  const div = document.createElement('div');
+  div.className = 'bot-message';
+  div.innerHTML = text;
+  messages.appendChild(div);
+  messages.scrollTop = messages.scrollHeight;
+}
+
+// Affiche un message de l'utilisateur
+function userMessage(text){
+  const div = document.createElement('div');
+  div.className = 'user-message';
+  div.innerHTML = text;
+  messages.appendChild(div);
+  messages.scrollTop = messages.scrollHeight;
+}
+
+// Gestion des boutons
+function sendMessage(action){
+  if(action === 'formation'){
+    userMessage('🎓 Formation VIP');
+    botMessage('Voici le lien pour acheter la Formation VIP: <a href="https://wa.me/237673355468?text=Je%20veux%20acheter%20la%20formation%20VIP" target="_blank">Payer via WhatsApp</a>');
+  } else if(action === 'paiement'){
+    userMessage('💰 Infos Paiement');
+    botMessage('Vous pouvez payer directement via WhatsApp: <a href="https://wa.me/237673355468?text=Je%20veux%20payer%20ma%20formation" target="_blank">Lien paiement</a>');
+  } else if(action === 'contact'){
+    userMessage('📱 Contact Support');
+    botMessage('Contactez-nous directement sur WhatsApp: <a href="https://wa.me/237673355468" target="_blank">Envoyer un message</a>');
+  }
+}
+</script>
 </body>
 </html>
