@@ -180,8 +180,7 @@ document.querySelectorAll('.btn').forEach(btn => {
         btn.style.transform = '';
     });
 });
-</script>
-    <!-- Chatbot Investigo -->
+<!-- Chatbot Investigo corrigé -->
 <div id="chatbot">
   <div id="chat-header" onclick="toggleChat()">
     <img src="https://img.icons8.com/color/48/000000/whatsapp.png" style="width:24px; vertical-align:middle; margin-right:5px;">
@@ -189,7 +188,7 @@ document.querySelectorAll('.btn').forEach(btn => {
   </div>
   <div id="chat-window">
     <div id="chat-messages"></div>
-    <div id="chat-buttons" style="display:none;">
+    <div id="chat-buttons">
       <button onclick="sendMessage('formation')">🎓 Formation VIP</button>
       <button onclick="sendMessage('paiement')">💰 Infos Paiement</button>
       <button onclick="sendMessage('contact')">📱 Contact Support</button>
@@ -198,7 +197,6 @@ document.querySelectorAll('.btn').forEach(btn => {
 </div>
 
 <style>
-/* Chatbot container */
 #chatbot {
   position: fixed;
   bottom: 20px;
@@ -211,7 +209,6 @@ document.querySelectorAll('.btn').forEach(btn => {
   overflow: hidden;
 }
 
-/* Header */
 #chat-header {
   background: #25D366;
   color: white;
@@ -222,24 +219,22 @@ document.querySelectorAll('.btn').forEach(btn => {
   user-select: none;
 }
 
-/* Chat window */
 #chat-window {
   display: none;
   background: #fefefe;
   border-top: 1px solid #25D366;
-  max-height: 400px;
+  height: 400px; /* Hauteur fixe */
   display: flex;
   flex-direction: column;
 }
 
-/* Messages area */
 #chat-messages {
   padding: 10px;
   overflow-y: auto;
-  flex-grow: 1;
+  flex-grow: 1; /* prend tout l'espace disponible */
+  max-height: 340px;
 }
 
-/* Chat bubbles */
 .bot-message, .user-message {
   padding: 8px 12px;
   border-radius: 15px;
@@ -260,13 +255,15 @@ document.querySelectorAll('.btn').forEach(btn => {
   float: right;
 }
 
-/* Buttons container */
 #chat-buttons {
   display: flex;
   justify-content: space-around;
   padding: 10px;
   flex-wrap: wrap;
   border-top: 1px solid #ddd;
+  background: #fefefe;
+  position: sticky; /* reste en bas */
+  bottom: 0;
 }
 
 #chat-buttons button {
@@ -282,34 +279,29 @@ document.querySelectorAll('.btn').forEach(btn => {
 </style>
 
 <script>
-// Variables
 const messages = document.getElementById('chat-messages');
 const buttons = document.getElementById('chat-buttons');
 
-// Ouvre ou ferme le chat
 function toggleChat(){
   const window = document.getElementById('chat-window');
   if(window.style.display === 'block'){
     window.style.display = 'none';
   } else {
-    window.style.display = 'block';
-    buttons.style.display = 'flex';
+    window.style.display = 'flex';
     if(!messages.hasChildNodes()){
       botMessage("Bonjour 👋! Bienvenue sur Investigo. Choisissez une option ci-dessous pour commencer.");
     }
   }
 }
 
-// Affiche un message du bot
 function botMessage(text){
   const div = document.createElement('div');
   div.className = 'bot-message';
   div.innerHTML = text;
   messages.appendChild(div);
-  messages.scrollTop = messages.scrollHeight;
+  messages.scrollTop = messages.scrollHeight; // scroll automatique
 }
 
-// Affiche un message de l'utilisateur
 function userMessage(text){
   const div = document.createElement('div');
   div.className = 'user-message';
@@ -318,7 +310,6 @@ function userMessage(text){
   messages.scrollTop = messages.scrollHeight;
 }
 
-// Gestion des boutons
 function sendMessage(action){
   if(action === 'formation'){
     userMessage('🎓 Formation VIP');
