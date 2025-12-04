@@ -6,197 +6,51 @@
 <title>Investigo : Site d'Investissement</title>
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
-<!-- NAVBAR -->
-<nav class="navbar">
-    <p>Investigo</p>
-    <button class="menu-btn" id="menuBtn">☰</button>
-    <ul class="menu-dropdown" id="menuDropdown">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="propos.html">À propos</a></li>
-        <li><a href="services.html">Nos services</a></li>
-        <li><a href="immobilier.html">Immobilier</a></li>
-        <li><a href="crypto.html">Cryptomonnaies</a></li>
-        <li><a href="bourse.html">Bourse</a></li>
-        <li><a href="formations.html">Formations</a></li>
-        <li><a href="temoignages.html">Témoignages</a></li>
-        <li><a href="simulateur.html">Simulateur</a></li>
-        <li><a href="vip.html">VIP</a></li>
-    </ul>
-</nav>
-
-<!-- HERO SECTION -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>Bienvenue sur Investigo</h1>
-        <h2>Meilleur site d'investissement Conseils d'Afrique centrale</h2>
-        <h3>Appui au développement socio-économique et à la réduction de la pauvreté</h3>
-        <p>Découvrez les meilleures opportunités pour investir intelligemment.</p>
-        <a href="#invest" class="btn">Commencer</a>
-        <br>
-    </div>
-    <div class="hero-image">
-        <br>
-        <img src="https://th.bing.com/th/id/OIP.DwAo8tIuVxurkm-rDR7pMAHaE8?w=262&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" 
-             alt="image d'encouragement d'investissement">
-    </div>
-</section>
-
-<!-- INVESTMENTS CARDS -->
-<div class="container" id="invest">
-    <div class="card">
-        <h2>À propos</h2>
-        <p>Construire l'avenir financier de l'Afrique.</p>
-        <br>
-        <a href="propos.html" class="btn">En savoir plus</a>
-    </div>
-
-    <div class="card">
-        <h2>Nos services</h2>
-        <p>Des solutions adaptées à votre budget et vos objectifs financiers.</p>
-        <br>
-        <a href="services.html" class="btn">En savoir plus</a>
-    </div>
-
-    <div class="card">
-        <h2>Investir en Immobilier</h2>
-        <p>Profitez de rendements stables en investissant dans l'immobilier locatif.</p>
-        <br>
-        <a href="immobilier.html" class="btn">En savoir plus</a>
-    </div>
-
-    <div class="card">
-        <h2>Cryptomonnaies</h2>
-        <p>Découvrez comment générer des profits avec Bitcoin et Ethereum.</p>
-        <br>
-        <a href="crypto.html" class="btn">En savoir plus</a>
-    </div>
-
-    <div class="card">
-        <h2>Actions et Bourse</h2>
-        <p>Investissez sur les marchés financiers et maximisez vos gains.</p>
-        <br>
-        <a href="bourse.html" class="btn">En savoir plus</a>
-    </div>
-
-    <div class="card">
-        <h2>Simulateur</h2>
-        <p>Entre les informations ci-dessous et découvre combien tu peux gagner.</p>
-        <br>
-        <a href="simulateur.html" class="btn">En savoir plus</a>
-    </div>
-
-    <div class="card">
-        <h2>Témoignages</h2>
-        <p>Suivez les témoignages de nos nombreux investisseurs.</p>
-        <br>
-        <a href="temoignages.html" class="btn">En savoir plus</a>
-    </div>
-
-    <div class="card">
-        <h2>VIP</h2>
-        <p>Découvrez comment devenir millionnaire à petit prix.</p>
-        <br>
-        <a href="vip.html" class="btn">En savoir plus</a>
-    </div>
-
-    <div class="card">
-        <h2>Formations</h2>
-        <p>Venez découvrir les moyens de se former.</p>
-        <br>
-        <a href="formations.html" class="btn">En savoir plus</a>
-    </div>
-</div>
-
-<!-- CONTACT -->
-<section class="contact">
-    <h2>Besoin d'investir ou de confier votre parcours à un expert ?</h2>
-    <p>Contactez-nous via nos différents moyens de communication :</p>
-    <ul>
-        <li>WhatsApp : <a href="https://wa.me/237673355468">Contactez-nous</a></li>
-        <li>E-mail : <a href="mailto:brindicram@gmail.com">Laissez-nous un mail</a></li>
-        <li>Mentions-Légales : <a href="Mentions.html">Mentions-Légales</a></li>
-        <li>Politiques && Confidentialités : <a href="politiques.html">Politiques et Confidentialités</a></li>
-    </ul>
-</section>
-
-<!-- FOOTER -->
-<footer class="dernier">
-    <p>&copy; 2025 Investigo - Tous droits réservés.</p>
-</footer>
-
-<!-- SCROLL TO TOP BUTTON -->
-<button id="scrollTopBtn">↑</button>
-
-<!-- SCRIPT JS -->
-<script>
-const menuBtn = document.getElementById("menuBtn");
-const menuDropdown = document.getElementById("menuDropdown");
-
-menuBtn.addEventListener("click", () => {
-    menuDropdown.classList.toggle("show");
-});
-
-document.addEventListener("click", (e) => {
-    if (!e.target.closest(".navbar")) {
-        menuDropdown.classList.remove("show");
-    }
-});
-
-// Bouton scroll top
-const scrollBtn = document.getElementById("scrollTopBtn");
-window.addEventListener("scroll", () => {
-    if(window.scrollY > 400){
-        scrollBtn.classList.add("visible");
-    } else {
-        scrollBtn.classList.remove("visible");
-    }
-});
-scrollBtn.addEventListener("click", () => {
-    window.scrollTo({top:0, behavior:"smooth"});
-});
-
-// Animation des cartes
-document.querySelectorAll('.card').forEach((card, i) => {
-    card.style.opacity = 0;
-    card.style.transform = 'translateY(40px)';
-    setTimeout(() => {
-        card.style.transition = 'all 0.8s cubic-bezier(.25,.8,.25,1)';
-        card.style.opacity = 1;
-        card.style.transform = 'translateY(0)';
-    }, 400 + i * 300);
-});
-
-// Effet hover lumineux sur boutons
-document.querySelectorAll('.btn').forEach(btn => {
-    btn.addEventListener('mouseenter', () => {
-        btn.style.boxShadow = '0 0 20px 5px #ffd700';
-        btn.style.transform = 'scale(1.08)';
-    });
-    btn.addEventListener('mouseleave', () => {
-        btn.style.boxShadow = '';
-        btn.style.transform = '';
-    });
-});
-<!-- Chatbot Investigo corrigé -->
-<div id="chatbot">
-  <div id="chat-header" onclick="toggleChat()">
-    <img src="https://img.icons8.com/color/48/000000/whatsapp.png" style="width:24px; vertical-align:middle; margin-right:5px;">
-    Investigo
-  </div>
-  <div id="chat-window">
-    <div id="chat-messages"></div>
-    <div id="chat-buttons">
-      <button onclick="sendMessage('formation')">🎓 Formation VIP</button>
-      <button onclick="sendMessage('paiement')">💰 Infos Paiement</button>
-      <button onclick="sendMessage('contact')">📱 Contact Support</button>
-    </div>
-  </div>
-</div>
-
 <style>
+/* --- Menu burger --- */
+.menu-dropdown {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ddd;
+  right: 10px;
+  top: 50px;
+  z-index: 100;
+}
+
+.menu-dropdown.show {
+  display: block;
+}
+
+.menu-dropdown li {
+  padding: 10px 15px;
+}
+
+.menu-dropdown li a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* --- Bouton scroll top --- */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+  background: #25D366;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  z-index: 999;
+}
+
+/* --- Chatbot --- */
 #chatbot {
   position: fixed;
   bottom: 20px;
@@ -223,15 +77,14 @@ document.querySelectorAll('.btn').forEach(btn => {
   display: none;
   background: #fefefe;
   border-top: 1px solid #25D366;
-  height: 400px; /* Hauteur fixe */
-  display: flex;
+  height: 400px;
   flex-direction: column;
 }
 
 #chat-messages {
   padding: 10px;
   overflow-y: auto;
-  flex-grow: 1; /* prend tout l'espace disponible */
+  flex-grow: 1;
   max-height: 340px;
 }
 
@@ -262,7 +115,7 @@ document.querySelectorAll('.btn').forEach(btn => {
   flex-wrap: wrap;
   border-top: 1px solid #ddd;
   background: #fefefe;
-  position: sticky; /* reste en bas */
+  position: sticky;
   bottom: 0;
 }
 
@@ -277,14 +130,161 @@ document.querySelectorAll('.btn').forEach(btn => {
   font-weight: bold;
 }
 </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <p>Investigo</p>
+    <button class="menu-btn" id="menuBtn">☰</button>
+    <ul class="menu-dropdown" id="menuDropdown">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="propos.html">À propos</a></li>
+        <li><a href="services.html">Nos services</a></li>
+        <li><a href="immobilier.html">Immobilier</a></li>
+        <li><a href="crypto.html">Cryptomonnaies</a></li>
+        <li><a href="bourse.html">Bourse</a></li>
+        <li><a href="formations.html">Formations</a></li>
+        <li><a href="temoignages.html">Témoignages</a></li>
+        <li><a href="simulateur.html">Simulateur</a></li>
+        <li><a href="vip.html">VIP</a></li>
+    </ul>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Bienvenue sur Investigo</h1>
+        <h2>Meilleur site d'investissement Conseils d'Afrique centrale</h2>
+        <h3>Appui au développement socio-économique et à la réduction de la pauvreté</h3>
+        <p>Découvrez les meilleures opportunités pour investir intelligemment.</p>
+        <a href="#invest" class="btn">Commencer</a>
+    </div>
+    <div class="hero-image">
+        <img src="https://th.bing.com/th/id/OIP.DwAo8tIuVxurkm-rDR7pMAHaE8?w=262&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" 
+             alt="image d'encouragement d'investissement">
+    </div>
+</section>
+
+<!-- INVESTMENTS CARDS -->
+<div class="container" id="invest">
+    <div class="card">
+        <h2>À propos</h2>
+        <p>Construire l'avenir financier de l'Afrique.</p>
+        <a href="propos.html" class="btn">En savoir plus</a>
+    </div>
+    <div class="card">
+        <h2>Nos services</h2>
+        <p>Des solutions adaptées à votre budget et vos objectifs financiers.</p>
+        <a href="services.html" class="btn">En savoir plus</a>
+    </div>
+    <div class="card">
+        <h2>Investir en Immobilier</h2>
+        <p>Profitez de rendements stables en investissant dans l'immobilier locatif.</p>
+        <a href="immobilier.html" class="btn">En savoir plus</a>
+    </div>
+    <div class="card">
+        <h2>Cryptomonnaies</h2>
+        <p>Découvrez comment générer des profits avec Bitcoin et Ethereum.</p>
+        <a href="crypto.html" class="btn">En savoir plus</a>
+    </div>
+    <div class="card">
+        <h2>Actions et Bourse</h2>
+        <p>Investissez sur les marchés financiers et maximisez vos gains.</p>
+        <a href="bourse.html" class="btn">En savoir plus</a>
+    </div>
+    <div class="card">
+        <h2>Simulateur</h2>
+        <p>Entre les informations ci-dessous et découvre combien tu peux gagner.</p>
+        <a href="simulateur.html" class="btn">En savoir plus</a>
+    </div>
+    <div class="card">
+        <h2>Témoignages</h2>
+        <p>Suivez les témoignages de nos nombreux investisseurs.</p>
+        <a href="temoignages.html" class="btn">En savoir plus</a>
+    </div>
+    <div class="card">
+        <h2>VIP</h2>
+        <p>Découvrez comment devenir millionnaire à petit prix.</p>
+        <a href="vip.html" class="btn">En savoir plus</a>
+    </div>
+    <div class="card">
+        <h2>Formations</h2>
+        <p>Venez découvrir les moyens de se former.</p>
+        <a href="formations.html" class="btn">En savoir plus</a>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact">
+    <h2>Besoin d'investir ou de confier votre parcours à un expert ?</h2>
+    <p>Contactez-nous via nos différents moyens de communication :</p>
+    <ul>
+        <li>WhatsApp : <a href="https://wa.me/237673355468">Contactez-nous</a></li>
+        <li>E-mail : <a href="mailto:brindicram@gmail.com">Laissez-nous un mail</a></li>
+        <li>Mentions-Légales : <a href="Mentions.html">Mentions-Légales</a></li>
+        <li>Politiques & Confidentialités : <a href="politiques.html">Politiques et Confidentialités</a></li>
+    </ul>
+</section>
+
+<!-- FOOTER -->
+<footer class="dernier">
+    <p>&copy; 2025 Investigo - Tous droits réservés.</p>
+</footer>
+
+<!-- BOUTON SCROLL TOP -->
+<button id="scrollTopBtn">↑</button>
+
+<!-- CHATBOT -->
+<div id="chatbot">
+  <div id="chat-header" onclick="toggleChat()">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp.png" style="width:24px; vertical-align:middle; margin-right:5px;">
+    Investigo
+  </div>
+  <div id="chat-window">
+    <div id="chat-messages"></div>
+    <div id="chat-buttons">
+      <button onclick="sendMessage('formation')">🎓 Formation VIP</button>
+      <button onclick="sendMessage('paiement')">💰 Infos Paiement</button>
+      <button onclick="sendMessage('contact')">📱 Contact Support</button>
+    </div>
+  </div>
+</div>
 
 <script>
+// --- Burger menu ---
+const menuBtn = document.getElementById("menuBtn");
+const menuDropdown = document.getElementById("menuDropdown");
+
+menuBtn.addEventListener("click", () => {
+    menuDropdown.classList.toggle("show");
+});
+
+document.addEventListener("click", (e) => {
+    if (!e.target.closest(".navbar")) {
+        menuDropdown.classList.remove("show");
+    }
+});
+
+// --- Scroll to top ---
+const scrollBtn = document.getElementById("scrollTopBtn");
+window.addEventListener("scroll", () => {
+    if(window.scrollY > 400){
+        scrollBtn.style.display = "block";
+    } else {
+        scrollBtn.style.display = "none";
+    }
+});
+scrollBtn.addEventListener("click", () => {
+    window.scrollTo({top:0, behavior:"smooth"});
+});
+
+// --- Chatbot ---
 const messages = document.getElementById('chat-messages');
-const buttons = document.getElementById('chat-buttons');
 
 function toggleChat(){
   const window = document.getElementById('chat-window');
-  if(window.style.display === 'block'){
+  if(window.style.display === 'flex'){
     window.style.display = 'none';
   } else {
     window.style.display = 'flex';
@@ -299,7 +299,7 @@ function botMessage(text){
   div.className = 'bot-message';
   div.innerHTML = text;
   messages.appendChild(div);
-  messages.scrollTop = messages.scrollHeight; // scroll automatique
+  messages.scrollTop = messages.scrollHeight;
 }
 
 function userMessage(text){
@@ -323,5 +323,6 @@ function sendMessage(action){
   }
 }
 </script>
+
 </body>
-</html>
+    </html>
